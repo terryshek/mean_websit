@@ -1,0 +1,21 @@
+<div>
+    <!--meet up views-->
+    <hi>
+        There are {{meetups.length}} meetsup!
+    </hi>
+    <ul>
+        <li ng-repeat="meetup in meetups">
+            <input type="checkbox" name="{{meetup._id}}" id="{{meetup._id}}"/>
+            {{meetup.name}}
+        </li>
+    </ul>
+
+    <form ng-submit="createMeetup()">
+        <input type="text" placeholder="Meetup name" name=""  ng-model="meetupName"/>
+        <button type="submit">Add</button>
+    </form>
+    <!--<form ng-submit="searchMeetup()">-->
+    <!--<input type="text" placeholder="Meetup name" name=""  ng-model="Meetup_search"/>-->
+    <!--<button type="submit">Query</button>-->
+    <!--</form>-->
+</div>
